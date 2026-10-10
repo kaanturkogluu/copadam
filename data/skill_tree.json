@@ -1,0 +1,242 @@
+{
+  "categories": [
+    {
+      "id": "attack",
+      "name": "Atak",
+      "code": "A",
+      "icon": "sword.svg",
+      "color": "#ff5533",
+      "nodes": [
+        {
+          "id": "atk_root",
+          "parent": "",
+          "name": "+%3 Hasar",
+          "icon": "temel_saldiri_gucu.png",
+          "desc": "Tüm saldırı hasarını artırır",
+          "base_cost": 10,
+          "cost_multiplier": 1.5,
+          "max_level": 10,
+          "stat": "attack_dmg",
+          "value": 3
+        },
+        {
+          "id": "atk_basic",
+          "parent": "atk_root",
+          "name": "Temel Sal",
+          "desc": "Temel kılıç savuruş hasarını güçlendirir",
+          "base_cost": 20,
+          "cost_multiplier": 1.5,
+          "max_level": 10,
+          "stat": "attack_dmg",
+          "value": 4
+        },
+        {
+          "id": "atk_sub1",
+          "parent": "atk_basic",
+          "name": "+5 Hasar",
+          "desc": "Ekstra +5 sabit saldırı gücü (10 defa yükseltilebilir)",
+          "base_cost": 10,
+          "cost_multiplier": 1.5,
+          "max_level": 10,
+          "stat": "attack_dmg",
+          "value": 5
+        },
+        {
+          "id": "atk_sub2",
+          "parent": "atk_basic",
+          "name": "+5 Hasar",
+          "desc": "Ekstra +5 sabit saldırı gücü (10 defa yükseltilebilir)",
+          "base_cost": 10,
+          "cost_multiplier": 1.5,
+          "max_level": 10,
+          "stat": "attack_dmg",
+          "value": 5
+        },
+        {
+          "id": "atk_skill1",
+          "parent": "atk_root",
+          "name": "Skill 1",
+          "desc": "Özel saldırı tekniğini güçlendirir",
+          "base_cost": 30,
+          "cost_multiplier": 1.5,
+          "max_level": 5,
+          "stat": "attack_dmg",
+          "value": 8
+        },
+        {
+          "id": "atk_crit",
+          "parent": "atk_skill1",
+          "name": "Kritik Vuruş",
+          "desc": "Kritik vuruş hasarını artırır",
+          "base_cost": 50,
+          "cost_multiplier": 1.5,
+          "max_level": 5,
+          "stat": "attack_dmg",
+          "value": 10
+        },
+        {
+          "id": "atk_crit_rate",
+          "parent": "atk_crit",
+          "name": "Crit Rate\n+%5",
+          "desc": "Kritik vuruş şansını artırır (Sarı hasar)",
+          "base_cost": 40,
+          "cost_multiplier": 1.5,
+          "max_level": 10,
+          "stat": "crit_chance",
+          "value": 0.05
+        },
+        {
+          "id": "atk_crit_dmg",
+          "parent": "atk_crit",
+          "name": "Crit Dmg\n+0.15x",
+          "desc": "Kritik hasar çarpanını artırır (Sarı hasar)",
+          "base_cost": 40,
+          "cost_multiplier": 1.5,
+          "max_level": 10,
+          "stat": "crit_multiplier",
+          "value": 0.15
+        }
+      ]
+    },
+    {
+      "id": "defense",
+      "name": "Savunma",
+      "code": "S",
+      "icon": "shield.svg",
+      "color": "#3399ff",
+      "nodes": [
+        {
+          "id": "def_root",
+          "parent": "",
+          "name": "+%5 Zırh",
+          "icon": "shield.svg",
+          "desc": "Gelen hasarı azaltır",
+          "base_cost": 10,
+          "cost_multiplier": 1.5,
+          "max_level": 10,
+          "stat": "defense",
+          "value": 3
+        },
+        {
+          "id": "def_basic",
+          "parent": "def_root",
+          "name": "Temel Zırh",
+          "desc": "Zırh dayanıklılığı",
+          "base_cost": 25,
+          "cost_multiplier": 1.5,
+          "max_level": 10,
+          "stat": "defense",
+          "value": 5
+        },
+        {
+          "id": "def_sub1",
+          "parent": "def_basic",
+          "name": "+10 Zırh",
+          "desc": "Ekstra zırh puanı kazandırır",
+          "base_cost": 20,
+          "cost_multiplier": 1.5,
+          "max_level": 10,
+          "stat": "defense",
+          "value": 10
+        },
+        {
+          "id": "def_sub2",
+          "parent": "def_basic",
+          "name": "+10 Zırh",
+          "desc": "Ekstra zırh puanı kazandırır",
+          "base_cost": 20,
+          "cost_multiplier": 1.5,
+          "max_level": 10,
+          "stat": "defense",
+          "value": 10
+        },
+        {
+          "id": "def_hp",
+          "parent": "def_root",
+          "name": "+50 Can",
+          "desc": "Maksimum canı artırır",
+          "base_cost": 30,
+          "cost_multiplier": 1.5,
+          "max_level": 10,
+          "stat": "max_hp",
+          "value": 50
+        }
+      ]
+    },
+    {
+      "id": "magic",
+      "name": "Büyü",
+      "code": "B",
+      "icon": "magic.svg",
+      "color": "#aa44ff",
+      "nodes": [
+        {
+          "id": "mag_root",
+          "parent": "",
+          "name": "+5 Büyü Gücü",
+          "icon": "magic.svg",
+          "desc": "Büyü saldırı hasarını artırır (Mavi hasar)",
+          "base_cost": 15,
+          "cost_multiplier": 1.5,
+          "max_level": 10,
+          "stat": "magic_dmg",
+          "value": 5
+        },
+        {
+          "id": "mag_blast",
+          "parent": "mag_root",
+          "name": "+10 Büyü Gücü",
+          "desc": "Mavi büyü hasarını ekstra güçlendirir",
+          "base_cost": 40,
+          "cost_multiplier": 1.5,
+          "max_level": 8,
+          "stat": "magic_dmg",
+          "value": 10
+        },
+        {
+          "id": "mag_cd",
+          "parent": "mag_blast",
+          "name": "-%5 CD",
+          "desc": "Yetenek bekleme süresini azaltır",
+          "base_cost": 50,
+          "cost_multiplier": 1.5,
+          "max_level": 5,
+          "stat": "attack_dmg",
+          "value": 6
+        }
+      ]
+    },
+    {
+      "id": "utility",
+      "name": "Destek",
+      "code": "D",
+      "icon": "speed.svg",
+      "color": "#ffbb00",
+      "nodes": [
+        {
+          "id": "util_root",
+          "parent": "",
+          "name": "+%5 Hız",
+          "icon": "speed.svg",
+          "desc": "Karakter hareket hızını artırır",
+          "base_cost": 10,
+          "cost_multiplier": 1.5,
+          "max_level": 10,
+          "stat": "speed",
+          "value": 20
+        },
+        {
+          "id": "util_gold",
+          "parent": "util_root",
+          "name": "+%10 Altın",
+          "desc": "Kazanılan altın miktarını artırır",
+          "base_cost": 25,
+          "cost_multiplier": 1.5,
+          "max_level": 8,
+          "stat": "coins",
+          "value": 50
+        }
+      ]
+    }
+  ]
+}

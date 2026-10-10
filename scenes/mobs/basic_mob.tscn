@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://basic_mob_01"]
+
+[ext_resource type="Script" path="res://scripts/mobs/MobBase.gd" id="1_mob"]
+[ext_resource type="Script" path="res://scripts/mobs/MobStickVisual.gd" id="2_visual"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mob"]
+radius = 16.0
+height = 90.0
+
+[node name="BasicMob" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 1
+script = ExtResource("1_mob")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -45)
+shape = SubResource("CapsuleShape2D_mob")
+
+[node name="MobStickVisual" type="Node2D" parent="."]
+script = ExtResource("2_visual")
